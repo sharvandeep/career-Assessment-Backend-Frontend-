@@ -1,191 +1,222 @@
-# 🎯 Career Assessment Tool
+🎯 Career Assessment & Skill Analysis Platform
 
-A full-stack web application designed to help students evaluate their skills, analyze personality traits, and receive personalized career recommendations.
-
----
-
-## 🚀 Overview
-
-The **Career Assessment Tool** enables students to:
-
-* Take skill-based and personality assessments
-* Receive career recommendations based on performance
-* Track their progress and results
-
-It also provides an **Admin dashboard** to manage assessments, users, and results.
+A full-stack web application that helps students analyze their skills, identify strengths & weaknesses, and receive personalized career recommendations based on assessment performance.
 
 ---
 
-## 🛠️ Tech Stack
+🚀 Problem Statement
 
-### 🔹 Backend
+Traditional quiz systems only provide scores.
+They do not analyze skills or guide career decisions.
 
-* Java + Spring Boot
-* Spring Security
-* Hibernate / JPA
-* REST APIs
-* MySQL (or any relational DB)
+This project solves that by building a:
 
-### 🔹 Frontend
-
-* React.js
-* Vite
-* JavaScript (ES6+)
-* HTML5 + CSS3
+«✅ Career Assessment Platform that evaluates student performance, identifies skill gaps, and suggests suitable career paths.»
 
 ---
 
-## ✨ Features
+🧠 Key Objectives
 
-### 👨‍🎓 Student
-
-* User Registration & Login
-* Attempt Skill Assessments
-* Personality Test
-* View Results & Recommendations
-
-### 👨‍🏫 Admin
-
-* Manage Students & Users
-* Create & Manage Assessments
-* Review Student Submissions
-* Provide Feedback & Remarks
-
-### 📊 System
-
-* Career Recommendation Engine
-* Skill Analysis
-* Notification System
+- Analyze student performance beyond scores
+- Identify strong & weak subject areas
+- Provide career recommendations
+- Help faculty track student progress
+- Build a data-driven assessment system
 
 ---
 
-## 📂 Project Structure
+🛠️ Tech Stack
 
-career-assessment-backend/ → Spring Boot Backend
-career-assessment-frontend/ → React Frontend
+🔹 Backend
+
+- Java + Spring Boot
+- Spring Security
+- Hibernate / JPA
+- REST APIs
+- MySQL
+
+🔹 Frontend
+
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5 + CSS3
 
 ---
 
-## ⚙️ Installation & Setup
+✨ Core Features
 
-### 🔹 1. Clone Repository
+👨‍🎓 Student Module
 
-```bash
+- 🔐 User Registration & Login
+- 📝 Attempt Skill-Based Assessments
+- 📊 View Results & Performance Analysis
+- 📈 Track Progress Over Time
+- 🎯 Get Career Recommendations
+- 📚 View Assessment History
+
+---
+
+👨‍🏫 Faculty Module
+
+- 🛠️ Create & Manage Assessments
+- 👨‍🎓 Monitor Student Performance
+- 📊 View Results & Analytics
+- 🔍 Review Student Answers
+- 📈 Identify Weak & Strong Areas
+
+---
+
+📊 System Features
+
+- 🧠 Skill Analysis Engine
+- 🎯 Career Recommendation System
+- 📉 Performance Tracking
+- 🔔 Notification System
+- 🔐 Role-Based Access Control
+
+---
+
+🧩 System Workflow
+
+👨‍🎓 Student Flow
+
+1. Login / Register
+2. View Available Assessments
+3. Attempt Assessment
+4. Get Results
+5. View:
+   - Score & Percentage
+   - Strengths
+   - Weak Areas
+   - Career Suggestions
+6. Track History
+
+---
+
+👨‍🏫 Faculty Flow
+
+1. Login
+2. Create Assessment
+3. View Student Attempts
+4. Analyze Performance
+5. Improve Assessment Quality
+
+---
+
+📂 Project Structure
+
+career-assessment-backend/   → Spring Boot Backend
+career-assessment-frontend/  → React Frontend
+
+---
+
+⚙️ Installation & Setup
+
+🔹 1. Clone Repository
+
 git clone https://github.com/sharvandeep/career-Assessment-Backend-Frontend-.git
 cd career-Assessment-Backend-Frontend-
-```
 
 ---
 
-### 🔹 2. Backend Setup
+🗄️ Database Setup (MySQL)
 
-```bash
-cd career-assessment-backend
-```
+Step 1: Create Database
 
-#### Configure Database
+CREATE DATABASE career_assessment_db;
 
-Update `application.properties`:
+---
 
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/your_db
+Step 2: Configure Backend
+
+Edit:
+
+career-assessment-backend/src/main/resources/application.properties
+
+spring.datasource.url=jdbc:mysql://localhost:3306/career_assessment_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password
-```
 
-#### Run Backend
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
 
-```bash
+---
+
+Step 3: Run Backend
+
+cd career-assessment-backend
 mvn spring-boot:run
-```
 
 Backend runs at:
 
-```
 http://localhost:8080
-```
 
 ---
 
-### 🔹 3. Frontend Setup
+Step 4: Run Frontend
 
-```bash
 cd career-assessment-frontend
 npm install
 npm run dev
-```
 
 Frontend runs at:
 
-```
 http://localhost:5173
-```
 
 ---
 
-## 🔗 API Integration
+🔗 API Configuration
 
-Make sure frontend is connected to backend API:
+Ensure frontend is connected to backend:
 
-* Base URL: `http://localhost:8080/api`
-
----
-
-## 📸 Screenshots (Add Here)
-
-> *(You can add screenshots later to improve your project visibility)*
-
-Example:
-
-```
-![Dashboard](screenshots/dashboard.png)
-```
+http://localhost:8080/api
 
 ---
 
-## 🧪 Testing
 
-Backend:
 
-```bash
+
+🧪 Testing
+
+Backend
+
 mvn test
-```
 
-Frontend:
+Frontend
 
-```bash
 npm run build
-```
 
 ---
 
-## 📌 Future Improvements
+🚀 Future Enhancements
 
-* 🔐 JWT Authentication
-* 📱 Mobile Responsiveness
-* 📊 Advanced Analytics Dashboard
-* 🌐 Deployment (AWS / Vercel / Render)
-
----
-
-## 👨‍💻 Author
-
-**Sharvandeep**
-
-* GitHub: https://github.com/sharvandeep
+- 🔐 JWT Authentication
+- 📊 Advanced Analytics (Charts)
+- 📱 Mobile Responsiveness
+- 🌐 Cloud Deployment (AWS / Vercel / Render)
+- 🤖 AI-based Career Recommendation
 
 ---
 
-## ⭐ Support
+👨‍💻 Author
+
+Sharvandeep
+
+- GitHub: https://github.com/sharvandeep
+
+---
+
+⭐ Support
 
 If you like this project:
 
-* ⭐ Star the repository
-* 🍴 Fork it
-* 🧑‍💻 Contribute
+- ⭐ Star the repository
+- 🍴 Fork it
+- 🤝 Contribute
 
 ---
 
-## 📄 License
+📄 License
 
 This project is open-source and available under the MIT License.
