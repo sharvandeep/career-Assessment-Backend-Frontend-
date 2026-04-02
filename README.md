@@ -106,46 +106,64 @@ This project solves that by building a:
 
 📂 Project Structure
 
-career-assessment-backend/   → Spring Boot Backend
-career-assessment-frontend/  → React Frontend
+career-assessment-backend/   → Spring Boot Backend  
+career-assessment-frontend/  → React Frontend  
 
 ---
 
-⚙️ Installation & Setup
+⚙️ Installation & Setup Guide
 
-🔹 1. Clone Repository
+Follow these steps to run the project on your local machine.
+
+---
+
+🔹 Step 1: Clone Repository
 
 git clone https://github.com/sharvandeep/career-Assessment-Backend-Frontend-.git
+
 cd career-Assessment-Backend-Frontend-
 
 ---
 
-🗄️ Database Setup (MySQL)
+🗄️ Step 2: Setup MySQL Database
 
-Step 1: Create Database
+Open MySQL Workbench
+
+- Start MySQL Workbench
+- Connect to your local server
+
+Create Database
 
 CREATE DATABASE career_assessment_db;
 
 ---
 
-Step 2: Configure Backend
+🔹 Step 3: Configure Backend
 
-Edit:
+cd career-assessment-backend
 
-career-assessment-backend/src/main/resources/application.properties
+Open file:
+
+src/main/resources/application.properties
+
+Update:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/career_assessment_db
+
 spring.datasource.username=your_username
+
 spring.datasource.password=your_password
 
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
 
 ---
 
-Step 3: Run Backend
+🔹 Step 4: Run Backend
 
-cd career-assessment-backend
+mvn clean install
+
 mvn spring-boot:run
 
 Backend runs at:
@@ -154,10 +172,14 @@ http://localhost:8080
 
 ---
 
-Step 4: Run Frontend
+🔹 Step 5: Run Frontend
+
+Open new terminal:
 
 cd career-assessment-frontend
+
 npm install
+
 npm run dev
 
 Frontend runs at:
@@ -166,16 +188,48 @@ http://localhost:5173
 
 ---
 
-🔗 API Configuration
+🔗 Step 6: API Configuration
 
-Ensure frontend is connected to backend:
+Ensure frontend API base URL:
 
-http://localhost:8080/api
+http://localhost:8080
 
 ---
 
+🌐 Step 7: Open Application
 
+Open in browser:
 
+http://localhost:5173
+
+---
+
+⚠️ Common Issues & Fixes
+
+❌ Port Already in Use
+
+server.port=8081
+
+---
+
+❌ MySQL Connection Error
+
+- Check username/password
+- Ensure MySQL is running
+
+---
+
+❌ Node Modules Error
+
+npm install
+
+---
+
+❌ Maven Not Found
+
+./mvnw spring-boot:run
+
+---
 
 🧪 Testing
 
@@ -186,6 +240,27 @@ mvn test
 Frontend
 
 npm run build
+
+---
+
+📊 Key Differentiation
+
+Feature| Quiz App| This System
+Score Display| ✅| ✅
+Skill Analysis| ❌| ✅
+Weak Area Detection| ❌| ✅
+Career Recommendation| ❌| ✅
+Progress Tracking| ❌| ✅
+Faculty Analytics| ❌| ✅
+
+---
+
+📸 Screenshots
+
+«Add screenshots here for better presentation»
+
+![Student Dashboard](screenshots/student-dashboard.png)
+![Faculty Dashboard](screenshots/faculty-dashboard.png)
 
 ---
 
